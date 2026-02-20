@@ -67,8 +67,8 @@ sz_out<-sum2zero(hmc=gc_out$gencline_hmc,transform=TRUE,ci=0.90)
 
 ## plot genomic clines for the 51 loci, first without the sum-to-zero constraint
 ## then with it... these differ more for some data sets than others
-gencline_plot(center=gc_out$center[,1],v=gc_out$gradient,pdf=FALSE)
-gencline_plot(center=sz_out$center[,1],v=sz_out$gradient,pdf=FALSE)
+gencline_plot(center=gc_out$center[,1],v=gc_out$gradient[,1],pdf=FALSE)
+gencline_plot(center=sz_out$center[,1],v=sz_out$gradient[,1],pdf=FALSE)
 
 ## summarize loci with credible deviations from genome-average gradients, here the focus is
 ## specifically on steep clines indicative of loci introgressing less than the average
